@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<style>
+*{
+    font-family: 'Gupter',serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 30px;
+    overflow: hidden;
+    background-color:  rgb(23, 204, 129);
+    font-size: 15px;
+    font-family: 'Gupter', serif;
+
+}
+
+li {
+    float: right;
+    padding-top:10px;
+}
+
+li a {
+    display: block;
+    color: rgb(236, 241, 187);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(226, 181, 130);
+}
+
+.active {
+    background-color: #4CAF50;
+}
+.logo{
+    float:center;
+    padding-left:550px;
+    background-image:url("img/tropical.JPEG");
+}
+.headerImg{
+    width:100%;
+    float:center;
+    height:"200px";
+}
+.footer {
+   
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(23, 204, 129);
+   color: white;
+   text-align: center;
+   margin-top:100px;
+   overflow:auto;
+}
+.w3-center{
+    font-family:'Gupter',serif;
+}
+
+div {
+  padding: 5px;
+  padding-left:15px;
+  font-family:'Gupter',serif;
+}
+.img1{
+    float:center;
+    width:100%%;
+    height:600px;
+    padding-left:200px;
+}
+
+
+.clearfix {
+  overflow: auto;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.container {
+  position: relative;
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 40px; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 400px;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  font-family:'Gupter',serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+h1{
+    font-family:'Gupter',serif;
+}
+</style>
+<html>
+<head>
+<title>GreenWorld</title>
+<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Gupter&display=swap" rel="stylesheet">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" 
+    href="https://www.w3schools.com/w3css/4/w3.css">
+    
+  
+    
+</head>
+<body>
+<ul> 
+  <li><a class="active" href="index.html">HOME</a></li> 
+  <li><a href="contact.html">ABOUT</a></li>
+  <li><a href="products.html">PRODUCTS</a></li>
+  <li><a href="login.html">LOG IN</a></li>
+  <li style="float:right"></li>
+</ul>
+<div class="logo" style="float:center">
+  <img src="img/GreenWorldLogo3.png">
+</div>
+<h2 class="w3-center">Eco-Friendly Products</h2>
+ <img class="img1"src="img/bottle.JPEG">
+
+
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1 style="font-family:'Gupter',serif;">
+      About Us
+      </h1>
+      <h5 class="w3-padding-32" style="font-family:'Gupter',serif;">
+        GreenWorld promotes and supports e-commerce solutions. 
+        All our products are Eco-friendly and sustainable.
+      </h5>
+
+      <p class="w3-text-grey" style="font-family:'Gupter',serif;">
+        We beleive our home products will leave
+        a positive impact on the environment,
+        future generations and communities all over the globe.<br>
+        Our aim is to educate others on how to live an Eco-friendly sustainable lifestyle through our products we sell through this website.
+       </p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <img  src="img/hand.JPEG" width="500px" height="400px"
+      padding-right="30px">
+  
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+    <img src="img/fruit.jpeg" alt="fruit" style="width:400px" "height=auto""display:block">
+    <div class="overlay">Everyday products</div>
+  </div>
+  <div class="container">
+    <img src="img/traveler.png" alt="traveler" style="width:400px" "height=auto"
+    "display:block">
+    <div class="overlay"> travel eco-friendly </div>
+  </div>
+  <div class="container">
+    <img src="img/orange.JPEG "alt="orange" style="width:400px" "height=auto"
+    "display:block">
+    <div class="overlay"> Make your packed lunches Eco-friendly </div>
+  </div>
+
+
+
+<div class="footer">
+  <p>Footer</p>
+  <img src="img/GreenWorldLogo3.png">
+</div>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+</script>
+</body>
+</html>
